@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let tab = Array()
+        for (let index = 65; index <=90 ; index++)
+        {
+            tab.push(String.fromCharCode(index));
+        }
+
+        for (let index = 0; index < tab.length; index++)
+        {
+            let b = document.createElement("button");
+            b.innerHTML = tab[index];
+            document.body.appendChild(b);
+            b.addEventListener("click", l);
+        }
+
+        function l(argument)
+        {
+            console.log(argument.srcElement.innerHTML);
+        }
+    </script>
+</body>
+</html>
